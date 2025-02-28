@@ -1,52 +1,48 @@
-public class Pet {
+
+public abstract class Pet
+{
+
     private String name;
     private int age;
     private char gender;
+
+
     private static int numPets = 0;
 
-    public Pet() {
-        this.name = "Unknown";
-        this.age = 0;
-        this.gender = 'X';
+
+    public Pet(String n, int a, char g)
+    {
+        name = n;
+        age = a;
+        gender = g;
         numPets++;
     }
 
-    public Pet(String name, int age, char gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+    public Pet()
+    {
+        name = "unknown";
+        age = 0;
+        gender = 'F';
         numPets++;
     }
 
-    // Accessor methods (getters)
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public char getGender() {
-        return gender;
-    }
+    public String getName(){return name;}
+    public int getAge(){return age;}
+    public char getGender(){return gender;}
 
     public static int getNumPets(){return numPets;}
-    // Mutator methods (setters)
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+    public void setName(String n    ){name = n;}
+    public void setAge(int a){age = a;}
+    public void setGender(char g){gender = g;}
 
-    public void setGender(char gender) {
-        this.gender = gender;
-    }
+    public abstract void speak();
 
-    // toString method to provide a string representation of the Pet object
-    public String toString() {
-        return "Pet[name=" + name + ", age=" + age + ", gender=" + gender + "]";
+    // toString
+    public String toString()
+    {
+        return "Name:   " + name + "\n" +
+                "Age:    " + age  + "\n" +
+                "Gender: " + gender + "\n";
     }
 }

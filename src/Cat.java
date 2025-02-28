@@ -12,6 +12,11 @@ public class Cat extends Pet
 
     public void setNumWhiskers(int nw){numWhiskers = nw;}
 
+    public void speak()
+    {
+        System.out.println("Meow!");
+    }
+
     public String toString()
     {
         return super.toString() + "Num Whiskers: " + numWhiskers + "\n";

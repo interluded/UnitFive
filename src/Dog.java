@@ -8,16 +8,18 @@ public class Dog extends Pet
         aggression = aggr;
     }
 
-    public Dog() {
-
-    }
-
     public int getAggression(){return aggression;}
 
     public void setAggression(int a){aggression = a;}
+
+    public void speak()
+    {
+        System.out.println("Woof!");
+    }
 
     public String toString()
     {
         return super.toString() + "Aggression: " + aggression + "\n";
     }
 }
+
