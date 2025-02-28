@@ -22,7 +22,8 @@ public class RemovingFromArrayList {
         months.add("October");
         months.add("November");
         months.add("December");
-        System.out.println(months);
+        System.out.println(months.remove(5));
+       System.out.println(months);
         removeLessThan(months,6);
         System.out.println(months);
 

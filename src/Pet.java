@@ -31,9 +31,7 @@ public class Pet {
         return gender;
     }
 
-    public static int getNumPets(){
-        return numPets;
-    }
+    public static int getNumPets(){return numPets;}
     // Mutator methods (setters)
     public void setName(String name) {
         this.name = name;
